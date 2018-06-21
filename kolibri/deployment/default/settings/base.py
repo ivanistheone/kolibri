@@ -155,7 +155,8 @@ elif conf.OPTIONS['Database']['DATABASE_ENGINE'] == "postgres":
 # http://helpsharepointvision.nevron.com/Culture_Table.html
 
 with io.open(os.path.join(KOLIBRI_MODULE_PATH, "locale", "supported_languages.json"), encoding="utf-8") as f:
-    LANGUAGES = i18n.parse_supported_languages(json.load(f))
+    # LANGUAGES = i18n.parse_supported_languages(json.load(f))
+    LANGUAGES = [ ('ar', 'العَرَبِيَّة\u200e\u200e') ]
 
 # Some languages are not supported out-of-the-box by Django
 # Here, we use the language code in Intl.js
